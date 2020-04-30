@@ -25,10 +25,11 @@ const twelveSidedDie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   // NOTE: Introducing Functions video — https://teamtreehouse.com/library/introducing-functions-5
   // NOTE: Create a Random Number video — https://teamtreehouse.com/library/javascript-basics/working-with-numbers/create-a-random-number
 function diceRoll(array) {
-  var randomNumber = Math.ceil(Math.random() * 12) + 1;
+  var randomNumber = Math.ceil(Math.random() * 11) + 1;
+  return randomNumber;
 };
   // 2b) `return` the random number variable
-  return randomNumber;
+
 
 // 3) Complete the steps in the comments in the event listener below
 
@@ -42,11 +43,12 @@ playBtn.addEventListener('click', () => {
 
   // 4) Create two variables to store player one and player two scores
     // 4a) Set both variables equal to a call to the `diceRoll` function - Arguments: twelveSidedDie
-  var playerOneScore = diceRoll;
-  var playerTwoScore = diceRoll;
+  var playerOneScore = diceRoll();
+  var playerTwoScore = diceRoll();
 
   // 5) Log out the two variables above to test their values — check them out in the console
   console.log(playerOneScore);
+  console.log(playerTwoScore);
 
   // 6) Set the innerHTML of the `scoreOneElement` and `scoreTwoElement` variables above equal to the dice roll variables you just created
 
