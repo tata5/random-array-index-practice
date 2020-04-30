@@ -43,8 +43,8 @@ playBtn.addEventListener('click', () => {
 
   // 4) Create two variables to store player one and player two scores
     // 4a) Set both variables equal to a call to the `diceRoll` function - Arguments: twelveSidedDie
-  var playerOneScore = diceRoll();
-  var playerTwoScore = diceRoll();
+  var playerOneScore = diceRoll(twelveSidedDie);
+  var playerTwoScore = diceRoll(twelveSidedDie);
 
   // 5) Log out the two variables above to test their values — check them out in the console
   console.log(playerOneScore);
