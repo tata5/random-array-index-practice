@@ -24,8 +24,11 @@ const twelveSidedDie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   // 2a) Create a variable that uses `Math.ceil`, `Math.random` and the length of the array parameter to generate a random number
   // NOTE: Introducing Functions video — https://teamtreehouse.com/library/introducing-functions-5
   // NOTE: Create a Random Number video — https://teamtreehouse.com/library/javascript-basics/working-with-numbers/create-a-random-number
-function diceRoll(array.length) {
-  var randomNumber = Math.ceil(Math.random() * 11) + 1;
+  
+  // I've inserted the array.length inside of Math property because array.length inside of the parameter cannot be called. It's an invalid syntax
+  // that causes error in code. Array.length would needed to be passed inside the body of the function.
+function diceRoll(array) {
+  var randomNumber = Math.ceil(Math.random(array.length) * 11) + 1;
   return randomNumber;
 };
   // 2b) `return` the random number variable
