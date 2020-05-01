@@ -24,7 +24,7 @@ const twelveSidedDie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   // 2a) Create a variable that uses `Math.ceil`, `Math.random` and the length of the array parameter to generate a random number
   // NOTE: Introducing Functions video — https://teamtreehouse.com/library/introducing-functions-5
   // NOTE: Create a Random Number video — https://teamtreehouse.com/library/javascript-basics/working-with-numbers/create-a-random-number
-function diceRoll(array) {
+function diceRoll(array.length) {
   var randomNumber = Math.ceil(Math.random() * 11) + 1;
   return randomNumber;
 };
@@ -51,7 +51,8 @@ playBtn.addEventListener('click', () => {
   console.log(playerTwoScore);
 
   // 6) Set the innerHTML of the `scoreOneElement` and `scoreTwoElement` variables above equal to the dice roll variables you just created
-
+  scoreOneElement.innerHTML = diceRoll(twelveSidedDie);
+  scoreTwoElement.innerHTML = diceRoll(twelveSidedDie);
 
   // Helpful log statement to test function — You can comment out this if you like
   // console.log('Play button is functional!');
